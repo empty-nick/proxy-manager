@@ -18,7 +18,7 @@ export class ProxyController {
   ): Promise<{ status: string }> {
     let addProxyStatus: string = '';
     try {
-      await this.addProxy(proxyData);
+      await this.proxyService.addProxyData(proxyData);
       addProxyStatus = 'sucsex';
     } catch (e) {
       addProxyStatus = 'failed';
